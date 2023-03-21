@@ -1,0 +1,60 @@
+<html>
+  <title>Assignment 1</title>
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+  <script src="deploy.js"></script>
+  <style>
+    /* Center the form */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: aliceblue;
+    }
+
+    label {
+      font-size: 24px;
+      background-color: rgb(208, 235, 155);
+      padding: 10px;
+    }
+
+    input {
+      width: 600px;
+      height: 35px;
+      border-radius: 11px;
+    }
+
+    select {
+      height: 30px;
+    }
+
+    button {
+      height: 40px;
+      width: 150px;
+      background-color: aqua;
+    }
+  </style>
+
+  <body>
+    <form>
+      <label for="input-text">Enter Public Key</label><br />
+      <input type="text" id="publicKey" name="input-text" /><br /><br />
+      <label for="input-text">Amount</label><br />
+      <input type="number" id="amt" name="input-text" /><br /><br />
+      <label for="input-text">Select Tokens</label><br />
+      <select name="token" id="token">
+        <option value="SOL">Solana (SOL)</option>
+        <option value="LINK">Chainlink (LINK)</option>
+        <option value="LUNC">Terra Classic (LUNC)</option>
+        <option value="GMT">STEPN (GMT)</option>
+        <option value="SRM">Serum (SRM)</option>
+        <option value="GRT">The Graph (GRT)</option>
+        <option value="RNDR">Render Token (RNDR)</option>
+      </select>
+      <br /><br />
+
+      <button type="button" onclick="main()">Get Token</button>
+    </form>
+  </body>
+</html>
